@@ -1,0 +1,91 @@
+// one endpoint can be all queues
+
+// user just needs to know place in line
+
+//wehere do i make the endpoints
+
+// did we do that?
+
+//make database
+
+//make endpoints
+
+//how do i make hthe database?
+
+//is the server on the
+
+//make the queues on the database
+
+//have the user names onthe database
+
+//lookup what a cluster is
+
+//server is on the users laptop
+
+//modules/schemas are always on the server
+
+//the endpoints are the router.get and router.post stuff on api
+
+//how are the api and route functions related
+
+//what does the red stuff on VSCode mean?
+
+//how does the server connect to the database?
+
+//how do you write new data to the database?
+
+// what are atlasadmin permissions?
+
+// where do I connect to MongoDB?
+
+// why do I need multiple API endpoints
+
+// how do I write each new user's data to the database
+
+//how do I add each organization user's data to the database?
+
+// where is the Javascript library that was using C Im?
+
+// how do I deal with GitHub and how often am  I supposed to update it?
+
+// what do auth.login and auth.logout do on lines 25 and 26 of api.js?
+
+// where do I put the connection string to MongoDB?
+
+// Do I have to write multiple API methods for getting the path to the line position?
+
+// what do sockets do
+
+// how do I setup the login?
+
+// how do I define functions in Javascript
+
+// what is node.js
+
+// you have to import everything from the parent
+
+// look at the how to make website sheet
+
+// - where do we define what each prop in React does?
+// - In which files do we create the components for the backend?
+// - How do we create a new user in the login page and then add that user’s information to the DB? Which files are involved?
+// - How do we pull user information from the database and have the website update its HTML and CSS? Which files are involved?
+// - Which files do we have to create outside of the skeleton?
+// - How do we structure or code the database to save every user’s data’s when they login through Google?
+// - How do we add user entered data to the database?
+// - Where do we store different files for making our website?
+// - How do we have our webpage certain data in real time?
+// - How do we do asynchronous updates to a website?
+// - What is the relationship between the user, server, router, and database?
+// - How does component hierarchy relate to folder hierarchy on your local and global Github repository?
+// - Where is the code for workshop 3?
+// - How do we visualize github branches?
+// - Where was Feed.js created?
+// - Can we create a prop for anything or does it depend on the React library?
+// - Where do we create a prop?
+// - Can we create any type of component, or is there a limited number of components we can make?
+// - Where and how do we define user data as a prop?
+// - How do we edit user data in a prop?
+// - How do we get parts of our webpages to update asynchronously?
+// - How do you trigger a React state to trigger a re-render?
+// - Do you create props in the database and copy that over to the server, which sends it to the frontend?
