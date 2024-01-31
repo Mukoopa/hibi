@@ -14,8 +14,13 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
 
   const [greeting_state_Homejsln11, setGreeting_state_Homejsln11] = useState(1)
 
+  
+
   const update_greeting_state_send_to_database = () => {
-    if (greeting_state_Homejsln11 == 1) {
+    if (userId == null) {
+      alert("Not logged in");
+    }
+    else if (greeting_state_Homejsln11 == 1) {
       post("/api/greeting_State_database_apijs21", {state: 2}).then(() => {
         setGreeting_state_Homejsln11(2);
       });

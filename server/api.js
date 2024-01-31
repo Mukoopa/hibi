@@ -58,7 +58,6 @@ router.post("/greeting_State_database_apijs21", auth.ensureLoggedIn, (req, res) 
 
 router.get("/greeting_State_database_apijs21", auth.ensureLoggedIn, (req, res) => {
   console.log(req.user._id);
-  alert("Not logged in")
   User.findById(req.user._id).then((user) => {
     console.log("user", user);
     res.send({state: user.greeting_State_UserSchemaln7});
