@@ -4,8 +4,8 @@ const UserSchema = new mongoose.Schema({
   name: String,
   username: String,
   googleid: String,
-  personalQueue: [String], //queue of users in your line
-  queuesIn: [String], //queue of lines you're in
+  greeting_State_UserSchemaln7: Number,
+
 });
 
 // compile model from schema

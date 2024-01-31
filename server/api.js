@@ -18,6 +18,7 @@ const auth = require("./auth");
 // api endpoints: all these paths will be prefixed with "/api/"
 const router = express.Router();
 
+
 //const Queue =  require("./models/queue");
 //initialize socket
 const socketManager = require("./server-socket");
@@ -45,8 +46,23 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 
-// router.post("/allqueues"); // API method for getting all the queues
-router.post("/queuePosition"); //  API method for getting queue position
+router.post("/greeting_State_database_apijs21", auth.ensureLoggedIn, (req, res) => {
+  console.log(req.user._id);
+  User.findById(req.user._id).then((user) => {
+    console.log("user", user);
+  user.greeting_State_UserSchemaln7 = req.body.state;
+  user.save();
+  res.send(user);
+  })
+}); //API method for sending greeting state
+
+router.get("/greeting_State_database_apijs21", auth.ensureLoggedIn, (req, res) => {
+  console.log(req.user._id);
+  User.findById(req.user._id).then((user) => {
+    console.log("user", user);
+    res.send({state: user.greeting_State_UserSchemaln7});
+})
+});
 
 // workshop 3
 
