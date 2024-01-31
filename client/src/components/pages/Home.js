@@ -7,9 +7,12 @@ import "./Home.css";
 
 
 //TODO: REPLACE WITH YOUR OWN CLIENT_ID
-const GOOGLE_CLIENT_ID = "765781753125-8ofe76jbvub99vpfrhm80trrvuns70p3.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "874029397364-jj34gth9bjid4nfefmbsgpo7s91cplj3.apps.googleusercontent.com";
 
 const Home = ({ userId, handleLogin, handleLogout }) => {
+  if (userId == null) {
+    alert("Not logged in");
+  }
 
   const [greeting_state_Homejsln11, setGreeting_state_Homejsln11] = useState(1)
 
@@ -51,7 +54,9 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
       <button onClick={update_greeting_state_send_to_database}>click to change!</button>
       <div>{greeting_state_Homejsln11 === 1 ? "Hi" : "Bye"}</div>
     </GoogleOAuthProvider>
+    
   );
+  
 };
 
 export default Home;
