@@ -49,7 +49,7 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
         <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
       )}
       
-      <h1>Good luck on your project :)</h1>
+      <h1>Click button for surprise user:</h1>
       <h1>{userId}</h1>
       <button onClick={update_greeting_state_send_to_database}>click to change!</button>
       <div>{greeting_state_Homejsln11 === 1 ? "Hi" : "Bye"}</div>
