@@ -10,9 +10,7 @@ import "./Home.css";
 const GOOGLE_CLIENT_ID = "874029397364-jj34gth9bjid4nfefmbsgpo7s91cplj3.apps.googleusercontent.com";
 
 const Home = ({ userId, handleLogin, handleLogout }) => {
-  if (userId == null) {
-    alert("Not logged in");
-  }
+
 
   const [greeting_state_Homejsln11, setGreeting_state_Homejsln11] = useState(1)
 
@@ -31,7 +29,12 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
   }
 
   useEffect(() => {
-    get("/api/greeting_State_database_apijs21").then((res) => setGreeting_state_Homejsln11(res.state));
+    if (userId == null) {
+      alert("Not logged in");
+    }
+    else {
+      get("/api/greeting_State_database_apijs21").then((res) => setGreeting_state_Homejsln11(res.state));
+    }
   }, [])
    //update to my name variable 
   return (
@@ -50,7 +53,8 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
       )}
       
       <h1>Click button for surprise user:</h1>
-      <h1>{userId}</h1>
+      <h1>{userId}
+      </h1>
       <button onClick={update_greeting_state_send_to_database}>click to change!</button>
       <div>{greeting_state_Homejsln11 === 1 ? "Hi" : "Bye"}</div>
     </GoogleOAuthProvider>
