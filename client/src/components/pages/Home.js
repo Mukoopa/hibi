@@ -15,12 +15,14 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
 
   const update_greeting_state_send_to_database = () => {
     if (greeting_state_Homejsln11 == 1) {
-      setGreeting_state_Homejsln11(2);
-      post("/api/greeting_State_database_apijs21", {state: 2});
+      post("/api/greeting_State_database_apijs21", {state: 2}).then(() => {
+        setGreeting_state_Homejsln11(2);
+      });
     }
     else if (greeting_state_Homejsln11 == 2) {
-      setGreeting_state_Homejsln11(1);
-      post("/api/greeting_State_database_apijs21", {state: 1});
+      post("/api/greeting_State_database_apijs21", {state: 1}).then(() => {
+        setGreeting_state_Homejsln11(1);
+      });
     }
   
   }
@@ -43,6 +45,7 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
       ) : (
         <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
       )}
+      
       <h1>Good luck on your project :)</h1>
       <h1>{userId}</h1>
       <button onClick={update_greeting_state_send_to_database}>click to change!</button>
